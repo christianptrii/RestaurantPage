@@ -1,0 +1,522 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid white; */
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #111111;
+}
+
+.nav-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    position: relative;
+    padding: 40px 80px;
+    font-weight: bold;
+}
+
+.ctn{
+    background-color: #e67e22;
+    color: white;
+    width: 150px;
+    border: 3px solid #e67e22;
+    padding: 12px 30px;
+    border-radius: 100px;
+    font-weight: bold;
+    font-size: 15px;
+    transition: .4s;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.ctn:hover{
+    background: #1C1427;
+    border: 3px solid #e67e22;
+}
+
+.logo{
+    color: #FFFFFF;
+    font-size: 36px;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu li {
+    padding-left: 80px;
+}
+.menu li a {
+    /* display: inline-block; */
+    text-decoration: none;
+    color: #ffffff;
+    text-align: center;
+    transition: 0.15s ease-in-out;
+    position: relative;
+}
+
+.menu li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    transition: 0.15s ease-in-out;
+}
+
+.menu li a:hover:after {width: 100%;}
+.open-menu , .close-menu {
+    position: absolute;
+    color: #111111;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+}
+
+.open-menu {
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+.close-menu {
+    top: 40px;
+    right: 30px;
+}
+
+#check {display: none;}
+
+section{
+    padding: 10px 10%;
+}
+
+.home{
+    background: url('restaurant.jpg') no-repeat center center/cover;
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.4rem;
+    align-items: center;
+}
+
+.home img{
+    max-width: 100%;
+    width: 700px;
+    height: auto;
+}
+
+.home-text h1{
+    font-size: 85px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: #FFFFFF;
+    font-family: 'Oswald';
+    letter-spacing: 1px;
+}
+
+.home-text h1 span{
+    text-decoration: underline;
+    color: #e67e22;
+    font-family: 'Oswald';
+}
+
+.home-text p{
+    font-size: 16px;
+    margin: 25px 0 30px;
+    color: #FFFFFF;
+    font-weight:300;
+}
+
+.home .button-home{
+    display: flex;
+    justify-content: space-between;
+    width: 430px;
+    height: 50px;
+    margin-top: 15px;
+}
+
+.button-home .button2{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 80%;
+    background: #e67e22;
+    border: 3px solid #e67e22;
+    border-radius: 100px;
+    font-size: 19px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: .5s;
+}
+
+.button-home .button2:hover{
+    background: #1C1427;
+    border: 3px solid #e67e22;
+}
+
+.button-home .button1{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 240px;
+    height: 80%;
+    border: 3px solid #e67e22;
+    border-radius: 100px;
+    font-size: 19px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: .5s;
+}
+
+.button-home .button1:hover{
+    background: #e67e22;
+    border: 3px solid #e67e22;
+}
+
+.services{
+    color: #ffffff;
+    min-height: 80vh;
+}
+
+.services .services-text h1{
+    font-size: 52px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: #FFFFFF;
+    font-family: 'Oswald';
+    letter-spacing: 1px;
+    text-align: center;
+    padding-top: 90px;
+    text-decoration: underline #e67e22 3px solid;
+}
+
+.services .services-text h3{
+    padding-top: 5px;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.3;
+    color: #FFFFFF;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 160px;
+}
+
+.portofolios{
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+.portofolios-copy{
+    color: #ffffff;
+    min-height: 40vh;
+}
+
+.portofolios-copy .portofolios-text h1{
+    font-size: 52px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: #FFFFFF;
+    font-family: 'Oswald';
+    letter-spacing: 1px;
+    text-align: center;
+    padding-top: 120px;
+    text-decoration: underline #e67e22 3px solid;
+}
+
+.portofolios-copy .portofolios-text h3{
+    padding-top: 5px;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.3;
+    color: #FFFFFF;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.portofolios .portofolios-text h1{
+    font-size: 52px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: #FFFFFF;
+    font-family: 'Oswald';
+    letter-spacing: 1px;
+    text-align: center;
+    padding-top: 120px;
+    text-decoration: underline #e67e22 3px solid;
+}
+
+.portofolios .portofolios-text h3{
+    padding-top: 5px;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.3;
+    color: #FFFFFF;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.all-boxes-porto{
+    margin-top: 20px;
+}
+
+.box-porto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 160px;
+}
+
+.card-porto{
+    height: 400px;
+    width: 335px;
+    padding: 35px 35px;
+    border: 3px solid #815936;
+    /* background: #3e2d55; */
+    border-radius: 15px;
+    margin: 20px 40px;
+    position: relative;
+    /* overflow: hidden; */
+    /* display: flex; */
+}
+
+.card-porto1{
+    /* padding: 35px 35px; */
+    /* background: #3e2d55; */
+    border-radius: 15px;
+    margin: 20px 40px;
+    position: relative;
+    /* overflow: hidden; */
+    /* display: flex; */
+    margin-bottom: 30px;
+}
+
+.card-porto1 img{
+    border: 4px solid #815936;
+    width: 335px;
+    height: auto;
+    border-radius: 20px;
+}
+
+.card-porto i{
+    padding-bottom: 30px;
+    font-size: 30px;
+    display: block;
+    align-items: center;
+}
+
+.card-porto h5{
+    font-size: 20px;
+    padding-bottom: 16px;
+}
+
+.card-porto p{
+    font-size: 14px;
+    text-align: justify;
+    padding-bottom: 10px;
+}
+
+.card-porto a{
+    color: #dd914e;
+    text-decoration: underline 1px white;
+    font-weight: bold;
+}
+
+.text-porto{
+    padding-bottom: 20px;
+}
+
+.btn-porto .ctn-porto{
+    background-color: #e67e22;
+    color: white;
+    width: 150px;
+    border: 3px solid #e67e22;
+    padding: 12px 30px;
+    border-radius: 100px;
+    font-weight: bold;
+    font-size: 15px;
+    transition: .4s;
+    letter-spacing: 1px;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.btn-porto .ctn-porto:hover{
+    background: #111111;
+    border: 3px solid #e67e22;
+}
+
+.testimonials{
+    color: #ffffff;
+    min-height: 40vh;
+}
+
+.testimonials .testimonials-text h1{
+    font-size: 52px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: #FFFFFF;
+    font-family: 'Oswald';
+    letter-spacing: 1px;
+    text-align: center;
+    padding-top: 120px;
+    text-decoration: underline #e67e22 3px solid;
+}
+
+.testimonials .testimonials-text h3{
+    padding-top: 5px;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.3;
+    color: #FFFFFF;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.about{
+    width: 100%;
+    min-height: 50vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.4rem;
+    align-items: center;
+}
+
+.about img{
+    max-width: 100%;
+    width: 700px;
+    height: auto;
+}
+
+.card-about{
+    color: white;
+    height: 30px;
+    width: 335px;
+    padding: 0px 0px;
+    /* margin: 20px 40px; */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+}
+
+.card-about i{
+    font-size: 30px;
+    display: block;
+    align-items: center;
+}
+
+.card-about h5{
+    font-size: 20px;
+    padding: 0 16px
+}
+
+.about-text{
+    font-size: 12px;
+}
+
+.box-about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60px;
+}
+
+.home-text .mini-about{
+    font-size: 16px;
+    letter-spacing: 4px;
+    font-weight:bolder;
+    color: #e67e22;
+}
+
+.all-boxes-testimonials{
+    margin-top: 30px;
+}
+
+.box-testimonials{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* min-height: 50px; */
+}
+
+.card-testimonials{
+    text-align: center;
+    /* height: 400px; */
+    width: 335px;
+    padding: 35px 35px;
+    /* margin: 20px 40px; */
+}
+
+.card-testimonials i{
+    padding-bottom: 10px;
+    color: #e67e22;
+    font-size: 40px;
+    display: block;
+    align-items: center;
+}
+
+.card-testimonials h5{
+    font-size: 40px;
+    /* padding-bottom: 16px; */
+}
+
+.card-testimonials h5 span{
+    color: #e67e22;
+    font-size: 40px;
+    /* padding-bottom: 16px; */
+}
+
+.card-testimonials p{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+footer{
+    width: 100%;
+    background-color: #66380f;
+    height: 61px;
+}
+
+footer p{
+    letter-spacing: 1px;
+    font-weight: 600;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: white;
+    padding: 20px;
+}
+
+.contact-form{
+    display: flex;
+}
+
+form{
+    padding: 20px;
+}
